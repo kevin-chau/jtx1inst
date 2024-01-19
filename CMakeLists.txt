@@ -48,5 +48,6 @@ install(FILES ${HEADERS} DESTINATION include)
 if(BUILD_EXAMPLES)
   add_executable(jtx1inst_demo samples/jtx1inst_demo.c)
   target_link_libraries(jtx1inst_demo ${PROJECT_NAME})
+  target_link_libraries(jtx1inst_demo "/usr/lib/aarch64-linux-gnu/libi2c.so.0")
 endif()
 
